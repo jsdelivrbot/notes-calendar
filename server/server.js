@@ -15,7 +15,7 @@ require('./src/middlewares/custom-render')(app);
 require('./src/routes/index')(app);
 
 //Error 404
-app.use((req, res) => {
+app.use(function(req, res) {
     res.onRejected({
         code: 404,
         message: 'Not found'
