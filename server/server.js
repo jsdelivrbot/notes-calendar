@@ -1,0 +1,27 @@
+'use strict';
+
+var express = require('express');
+var app = express();
+var config = require('./config/express.json');
+var bodyParser = require('body-parser');
+
+// for parsing application/json
+app.use(bodyParser.json());
+// for parsing application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(__dirname + config.rootDirectory));
+
+require('./src/middlewares/custom-render')(app);
+require('./src/routes/index')(app);
+
+//Error 404
+app.use((req, res) => {
+    res.onRejected({
+        code: 404,
+        message: 'Not found'
+    });
+});
+
+app.listen(config.port, function() {
+    console.log('Server start. Port: ' + config.port);
+});
