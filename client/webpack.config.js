@@ -1,10 +1,11 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/app.js',
     output: {
-        path: path.resolve(__dirname, 'public/scripts'),
+        path: path.resolve(__dirname, '../server/public/scripts'),
         filename: 'bundle.js'
     },
     module: {
@@ -24,6 +25,13 @@ module.exports = {
         }]
     },
     plugins: [
-        new ExtractTextPlugin('../stylesheets/style.css')
+        new ExtractTextPlugin('../stylesheets/style.css'),
+        new CopyWebpackPlugin([{
+            from: './index.html',
+            to: path.resolve(__dirname, '../server/public')
+        }, {
+            from: './favicon.ico',
+            to: path.resolve(__dirname, '../server/public')
+        }])
     ]
 };

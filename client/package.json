@@ -1,21 +1,24 @@
 {
-    "name": "notes-calendar-client",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "build": "webpack",
-        "start": "webpack --watch"
-    },
-    "author": "axel_Sok",
-    "license": "ISC",
-    "devDependencies": {
-        "babel-preset-es2015": "^6.24.1", //es6
-        "babel-preset-stage-0": "^6.24.1", //es7
-        "css-loader": "^0.28.4",
-        "less-loader": "^4.0.5",
-        "style-loader": "^0.18.2",
-        "webpack": "^3.4.1",
-        "extract-text-webpack-plugin": "^3.0.0"
-    }
+  "name": "notes-calendar-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack --watch"
+  },
+  "author": "axel_Sok",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.4.1"
+  }
 }

@@ -1,4 +1,4 @@
-# todo-calendar
+# notes-calendar
 
 1. Authorization.
 2. View tasks (current day, week, month)
@@ -13,8 +13,8 @@ Server side packages:
   - nodemon
 
 Client side packages:
-  - babel-preset-es2015 //es6
-  - babel-preset-stage-0 //es7
+  - babel-preset-es2015
+  - babel-preset-stage-0
   - css-loader
   - less-loader
   - style-loader
