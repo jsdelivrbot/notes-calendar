@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 var config = require('./src/config/express.json');
 var bodyParser = require('body-parser');
-
+//heroku logs --app notes-calendar
 // for parsing application/json
 app.use(bodyParser.json());
 // for parsing application/x-www-form-urlencoded
