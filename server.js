@@ -24,5 +24,5 @@ app.use(function (req, res) {
     });
 });
 app.listen(config.port, function () {
-    console.log('Server start. Port: ' + (process.env.PORT || config.port));
+    console.log('Server start on port: ' + (process.env.PORT || config.port));
 });
