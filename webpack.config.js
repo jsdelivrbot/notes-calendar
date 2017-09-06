@@ -3,9 +3,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: './src/app.js',
+    entry: './front/app.js',
     output: {
-        path: path.resolve(__dirname, '../server/public/scripts'),
+        path: path.resolve(__dirname, './public/scripts'),
         filename: 'bundle.js'
     },
     module: {
@@ -28,10 +28,10 @@ module.exports = {
         new ExtractTextPlugin('../stylesheets/style.css'),
         new CopyWebpackPlugin([{
             from: './index.html',
-            to: path.resolve(__dirname, '../server/public')
+            to: path.resolve(__dirname, './public')
         }, {
             from: './favicon.ico',
-            to: path.resolve(__dirname, '../server/public')
+            to: path.resolve(__dirname, './public')
         }])
     ]
 };

@@ -23,7 +23,8 @@ app.use(function (req, res) {
         message: 'Not found'
     });
 });
-
 app.listen(config.port, function () {
     console.log('Server start. Port: ' + config.port);
+    console.log('Dir: ' + __dirname + config.rootDirectory);
+
 });
