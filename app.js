@@ -20,7 +20,7 @@ require('./src/routes/index')(app);
 app.use(function (req, res) {
     res.onRejected({
         code: 404,
-        message: 'Not found'
+        message: 'Not found!'
     });
 });
 app.listen(config.port, function () {
