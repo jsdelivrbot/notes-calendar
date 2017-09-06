@@ -24,7 +24,5 @@ app.use(function (req, res) {
     });
 });
 app.listen(config.port, function () {
-    console.log('Server start. Port: ' + config.port);
-    console.log('Dir: ' + __dirname + config.rootDirectory);
-
+    console.log('Server start. Port: ' + (process.env.PORT || config.port));
 });
