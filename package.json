@@ -8,7 +8,7 @@
         "start": "node server.js",
         "server-dev": "nodemon server.js",
         "front-dev": "webpack --watch",
-        "postinstall": "npm install && webpack"
+        "postinstall": "webpack"
     },
     "author": "axel_sok",
     "license": "ISC",
