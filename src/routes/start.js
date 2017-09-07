@@ -1,5 +1,7 @@
-const StartService = require('./../services/start');
-const startService = new StartService();
+'use strict';
+
+var StartService = require('./../services/start');
+var startService = new StartService();
 
 module.exports = function(app) {
     app.route('/1')

@@ -26,12 +26,12 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin('../stylesheets/style.css'),
-        new CopyWebpackPlugin([{
-            from: './index.html',
-            to: path.resolve(__dirname, './public')
-        }, {
-            from: './favicon.ico',
-            to: path.resolve(__dirname, './public')
-        }])
+        // new CopyWebpackPlugin([{
+        //     from: './index.html',
+        //     to: path.resolve(__dirname, './public')
+        // }, {
+        //     from: './favicon.ico',
+        //     to: path.resolve(__dirname, './public')
+        // }])
     ]
 };
