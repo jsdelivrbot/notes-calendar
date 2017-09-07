@@ -4,6 +4,7 @@ var express = require('express');
 var app = express();
 var config = require('./src/config/express.json');
 var bodyParser = require('body-parser');
+// "postinstall": "npm install express",
 // heroku logs --app notes-calendar
 // for parsing application/json
 app.use(bodyParser.json());
@@ -14,10 +15,6 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(__dirname + config.rootDirectory));
 require('./src/middlewares/custom-render')(app);
 require('./src/routes/index')(app);
-
-app.get('/', function(req, res) {
-    res.sendfile('./public/index.html');
-});
 
 //Error 404
 app.use(function(req, res) {

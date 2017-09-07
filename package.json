@@ -4,11 +4,10 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-        "postinstall": "npm install express",
+        "build": "webpack",
         "start": "node server.js",
         "server-dev": "nodemon server.js",
-        "front-dev": "webpack --watch",
-        "build": "webpack"
+        "front-dev": "webpack --watch"
     },
     "author": "axel_sok",
     "license": "ISC",
