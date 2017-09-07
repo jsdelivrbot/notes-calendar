@@ -4,7 +4,7 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-        "postinstall": "npm install && npm run build",
+        "postinstall": "npm install express && npm run build",
         "start": "node server.js",
         "server-dev": "nodemon server.js",
         "front-dev": "webpack --watch",
@@ -31,3 +31,13 @@
         "webpack": "^3.4.1"
     }
 }
+
+heroku git: clone - a notes - calendar
+$ cd notes - calendar
+Deploy your changes
+
+Make some changes to the code you just cloned and deploy them to Heroku using Git.
+
+$ git add.
+$ git commit - am "make it better"
+$ git push heroku master
