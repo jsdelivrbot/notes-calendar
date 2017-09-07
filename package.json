@@ -4,6 +4,7 @@
     "description": "",
     "main": "server.js",
     "scripts": {
+        "postinstall": "npm install && npm run build",
         "start": "node server.js",
         "server-dev": "nodemon server.js",
         "front-dev": "webpack --watch",
