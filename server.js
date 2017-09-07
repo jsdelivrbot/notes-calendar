@@ -12,9 +12,12 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(express.static(__dirname + config.rootDirectory));
-
 require('./src/middlewares/custom-render')(app);
 require('./src/routes/index')(app);
+
+app.get('/', function(req, res) {
+    res.sendfile('./public/index.html');
+});
 
 //Error 404
 app.use(function(req, res) {
