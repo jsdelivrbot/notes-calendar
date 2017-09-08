@@ -13,8 +13,14 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(express.static(__dirname + config.rootDirectory));
-require('./src/middlewares/custom-render')(app);
-require('./src/routes/index')(app);
+// require('./src/middlewares/custom-render')(app);
+// require('./src/routes/index')(app);
+
+app.route('/').get(function(req, res) {
+    res.sendFile('index.html', {
+        root: __dirname + config.rootDirectory
+    });
+});
 
 //Error 404
 app.use(function(req, res) {
