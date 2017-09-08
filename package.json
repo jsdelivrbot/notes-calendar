@@ -9,6 +9,10 @@
         "dev-server": "nodemon app.js",
         "dev-web": "webpack --watch"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/axelSok/notes-calendar"
+    },
     "author": "axel_sok",
     "license": "ISC",
     "dependencies": {
