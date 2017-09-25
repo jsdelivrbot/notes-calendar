@@ -20,7 +20,7 @@ app.get('/', function(request, response) {
   response.render('index.html');
 });
 
-Error 404
+// Error 404
 app.use(function(req, res) {
     res.onRejected({
         code: 404,
