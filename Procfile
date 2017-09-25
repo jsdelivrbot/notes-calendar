@@ -1,1 +1,1 @@
-web: npm install --dev; npm run build; node app.js
+web: npm install --only=dev; npm run build; node app.js
