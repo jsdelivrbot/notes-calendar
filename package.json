@@ -4,6 +4,7 @@
     "description": "",
     "main": "app.js",
     "scripts": {
+        "build": "",
         "start": "node app.js",
         "dev-server": "nodemon app.js",
         "dev-web": "webpack --watch"
