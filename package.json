@@ -4,7 +4,6 @@
     "description": "",
     "main": "app.js",
     "scripts": {
-        "build": "webpack --config ./webpack.config.js --progress --colors",
         "start": "node app.js",
         "dev-server": "nodemon app.js",
         "dev-web": "webpack --watch"
