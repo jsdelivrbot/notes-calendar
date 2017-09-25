@@ -2,7 +2,7 @@
 
 var express = require('express');
 var app = express();
-var config = require('./src/config/express.json');
+//var config = require('./src/config/express.json');
 var bodyParser = require('body-parser');
 // "postinstall": "npm install express",
 // heroku logs --app notes-calendar
@@ -17,7 +17,7 @@ app.use(express.static(__dirname + config.rootDirectory));
 //require('./src/routes/index')(app);
 
 app.get('/', function(request, response) {
-  response.render('index.html');
+  response.render('index');
 });
 
 // Error 404
@@ -29,7 +29,7 @@ app.use(function(req, res) {
 });
 
 app.listen(config.port, function() {
-    console.log('Server start on port: ' + (process.env.PORT || config.port));
+    console.log('Server start on port: ' + (process.env.PORT || 3012));
 });
 /*var express = require('express');
 var app = express();
