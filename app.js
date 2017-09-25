@@ -16,10 +16,8 @@ app.use(express.static(__dirname + config.rootDirectory));
 // require('./src/middlewares/custom-render')(app);
 // require('./src/routes/index')(app);
 
-app.route('/').get(function(req, res) {
-    res.sendFile('index.html', {
-        root: __dirname + config.rootDirectory
-    });
+app.get('/', function(request, response) {
+  response.render('index.html');
 });
 
 //Error 404
