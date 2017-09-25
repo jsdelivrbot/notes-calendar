@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use(express.static(__dirname + config.rootDirectory));
+app.use(express.static(__dirname + '/public'));
 //require('./src/middlewares/custom-render')(app);
 //require('./src/routes/index')(app);
 
