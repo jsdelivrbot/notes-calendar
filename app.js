@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 // "postinstall": "npm install express",
 // heroku logs --app notes-calendar
 // for parsing application/json
+app.set('port', (process.env.PORT || 5000));
 app.use(bodyParser.json());
 // for parsing application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
@@ -28,8 +29,8 @@ app.use(function(req, res) {
     });
 });
 
-app.listen(config.port, function() {
-    console.log('Server start on port: ' + (process.env.PORT || 3012));
+app.listen(app.get('port'), function() {
+    console.log('Server start on port: ' + app.get('port'));
 });
 /*var express = require('express');
 var app = express();
