@@ -25,7 +25,7 @@ module.exports = {
         }]
     },
     plugins: [
-        new ExtractTextPlugin('../stylesheets/styles.css'),
+        new ExtractTextPlugin('../stylesheets/main.css'),
         // new CopyWebpackPlugin([{
         //     from: './index.html',
         //     to: path.resolve(__dirname, './public')
