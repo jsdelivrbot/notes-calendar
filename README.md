@@ -2,6 +2,8 @@
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
+project link: https://notes-and-calendars.herokuapp.com/
+
 1. Authorization.
 2. View tasks (current day, week, month)
 3. Add / Edit / delete tasks (the ability to transfer them between days / in time, both during editing and drag & drop).
