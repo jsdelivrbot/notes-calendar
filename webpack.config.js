@@ -17,15 +17,15 @@ module.exports = {
             }
         }],
         rules: [{
-            test: /\.less$/,
+            test: /\.scss$/,
             use: ExtractTextPlugin.extract({
                 fallback: 'style-loader',
-                use: ['css-loader', 'less-loader']
+                use: ['css-loader', 'sass-loader']
             })
         }]
     },
     plugins: [
-        new ExtractTextPlugin('../stylesheets/style.css'),
+        new ExtractTextPlugin('../stylesheets/styles.css'),
         // new CopyWebpackPlugin([{
         //     from: './index.html',
         //     to: path.resolve(__dirname, './public')
